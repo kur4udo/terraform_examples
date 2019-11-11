@@ -30,9 +30,9 @@ variable bucket_names {
   description = "List with bucket names"
   type = list(string)
   default = [
-    "bucket_1",
-    "bucket_2",
-    "bucket_3"
+    "bucket-1",
+    "bucket-2",
+    "bucket-3"
   ]
 }
 
