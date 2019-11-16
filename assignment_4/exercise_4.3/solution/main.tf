@@ -30,11 +30,13 @@ variable bucket_names {
   description = "List with bucket names"
   type = list(string)
   default = [
-    "tg-tf-bucket-1",
-    "tg-tf-bucket-2",
-    "tg-tf-bucket-3"
+    "test-bucket-1",
+    "test-bucket-2",
+    "test-bucket-3"
   ]
 }
+
+# Variable
 
 variable region {
   description = "Enter region:"
