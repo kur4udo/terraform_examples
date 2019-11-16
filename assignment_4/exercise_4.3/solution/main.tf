@@ -44,14 +44,19 @@ variable region {
 
 # Outputs
 
-# Create an output for region, make it sensitive
+output region { 
+  value = var.region
+  sensitive = true
+}
 
+output bucket_1 {
+  value = aws_s3_bucket.bucket_1.id
+}
 
-# Create an output for id of bucket_1
+output bucket_2 {
+  value = aws_s3_bucket.bucket_2.id
+}
 
-
-# Create an output for id of bucket_2
-
-
-# Create an output for id of bucket_3
-
+output bucket_3 {
+  value = aws_s3_bucket.bucket_3.id
+}
