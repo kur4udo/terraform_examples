@@ -2,22 +2,19 @@
 # main.tf
 
 provider "aws" {
-  region = "eu-west-1"
+  region = ""
 }
 
 # Random provider -> resource random_id
 
-resource "random_id" "bucket_id" {
-  #byte_length = 8
-  byte_length = 16
-}
+#resource "random_id" "bucket_id" {  
+#  # Add byte_length attribute equal 8
+#}
 
 # Buckets with random names
 
 resource "aws_s3_bucket" "bucket_1" {
-  bucket = "bucket-${random_id.bucket_id.dec}"
+  bucket = "" # Use dec attribute of random_id as a bucket name
 }
 
-resource "aws_s3_bucket" "bucket_2" {
-  bucket = "bucket-${random_id.bucket_id.hex}"
-}
+# Define bucket resource as above but use hex attribute of random_id as a name

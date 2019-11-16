@@ -7,13 +7,13 @@ provider "aws" {
 
 # Random provider -> random_integer
 
-#resource "random_integer" "ri" {
-#  Add min attribute
-#  Add max attribute
-#}
+resource "random_integer" "ri" {
+  min = 100000
+  max = 900000
+}
 
 resource "aws_s3_bucket" "bucket_1" {
-  bucket = "" # Use random_integer id as a name"
+  bucket = "bucket-${random_integer.ri.id}"
 }
 
 # Random provider -> random_pet
@@ -21,17 +21,17 @@ resource "aws_s3_bucket" "bucket_1" {
 resource "random_pet" "rp" {}
 
 resource "aws_s3_bucket" "bucket_2" {
-  bucket = "" # Use random_pet id as a name"
+  bucket = "bucket-${random_pet.rp.id}"
 }
 
 # Random provider -> random_string
 
-#resource "random_string" "rs" {
-#  Add length attribute
-#  Add special attribute
-#  Add upper attribute
-#}
+resource "random_string" "rs" {
+  length  = 16
+  special = false
+  upper   = false
+}
 
 resource "aws_s3_bucket" "bucket_3" {
-  bucket = "" # Use random_string result as a name"
+  bucket = "bucket-${random_string.rs.result}"
 }
