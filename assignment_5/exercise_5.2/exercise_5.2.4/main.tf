@@ -50,7 +50,7 @@ resource "aws_security_group" "sg" {
 
 ## EC2
 
-resource "aws_instance" "ubuntu_server" {
+resource "aws_instance" "server" {
   ami           = data.aws_ami.amazon_linux.id
   instance_type = "t2.micro"
 
