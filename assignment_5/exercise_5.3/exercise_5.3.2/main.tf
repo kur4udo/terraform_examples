@@ -1,4 +1,4 @@
-# Exercise 5.3 - User data
+# Exercise 5.3.1 - User data and template - example solution
 # main.tf
 
 provider "aws" {
@@ -16,6 +16,8 @@ data "aws_ami" "amazon_linux" {
     values = ["amzn-ami-hvm*-x86_64-gp2"]
   }  
 }
+
+## Create data template_file and use file function to load file web_server.tpl - it is mentioned below in aws_instance.
 
 ## VPC
 
@@ -70,6 +72,8 @@ resource "aws_instance" "server" {
     Name = "EC2 created by Terraform"
   }
 
+  ## Create web_server.tpl file and move USERDATA content to it. Modify user_data to use data.template_file created above.
+
   user_data = <<-USERDATA
   #!/bin/bash
   yum install -y httpd
@@ -84,5 +88,5 @@ resource "aws_instance" "server" {
 
 resource "aws_key_pair" "ec2_key" {
   key_name = "Terraform training"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDTTiZoLzDkruL+aHsx58UslNIzC2oh+2y41KmO9p8/oFScnrxaA8cYAdKnfdwNGwTAiDlyJwSo5riLezLxob47gjYr/g4mPojD9qJ8SzV6GYsOz9loVG3XUs0YjkYupT+egDLEQLt94UzqWxGsXQuc7m99d0XZ/IdNoUcPcQ1hAEXcvzcFV2sb1QeBjZWeCy0eJ4zH0L0LRabfastW3Y2p3vt0BbcJZ30tF1WwC9RfyL7azVGGfITBPy8GgyXZVtsfmD7NmXc44t3hei96hiNlbZYA4H/2mqZSyUw3YjMfiY/okgytmLfteVfT2+o4PcVlAGkJCRz3ftMWv+XMwUot"
+  public_key = "ssh-rsa ..."
 }
