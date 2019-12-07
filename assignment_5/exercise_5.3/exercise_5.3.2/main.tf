@@ -17,8 +17,6 @@ data "aws_ami" "amazon_linux" {
   }  
 }
 
-## Create data template_file and use file function to load file web_server.tpl - it is mentioned below in aws_instance.
-
 ## VPC
 
 resource "aws_default_vpc" "default_vpc" {
@@ -72,7 +70,7 @@ resource "aws_instance" "server" {
     Name = "EC2 created by Terraform"
   }
 
-  ## Create web_server.tpl file and move USERDATA content to it. Modify user_data to use data.template_file created above.
+  ## Create web_server.tpl file and move USERDATA content to it. Modify user_data to use file function.
 
   user_data = <<-USERDATA
   #!/bin/bash

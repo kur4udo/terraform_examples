@@ -6,7 +6,6 @@ In this exercise we will create template file and use it as a user_data in aws_i
     - installing httpd,
     - creating /var/www/html/index.html with simple html,
     - starting httpd.
-2. Create template_file data resource which will read web_server.tpl file
-3. Use reference to data.template_file as a value for user_data.
+2. Use file function which will read web_server.tpl file and pass it to user_data argument.
 
 As a result, we will get Amazon Linux virtual machine hosting simple webpage.
