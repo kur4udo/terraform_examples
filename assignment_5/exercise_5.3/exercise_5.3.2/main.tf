@@ -1,4 +1,4 @@
-# Exercise 5.3.1 - User data and template - example solution
+# Exercise 5.3.2 - User data and template - example solution
 # main.tf
 
 provider "aws" {
