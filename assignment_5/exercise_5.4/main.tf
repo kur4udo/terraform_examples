@@ -63,7 +63,9 @@ resource "aws_security_group" "sg" {
 ## EC2
 
 resource "aws_instance" "server" {
-  count = 2
+  
+  ## Add count to have more that 1 instance
+  
   ami           = data.aws_ami.amazon_linux.id
   instance_type = "t2.micro"
 
