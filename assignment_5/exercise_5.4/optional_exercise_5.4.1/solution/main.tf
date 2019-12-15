@@ -107,8 +107,7 @@ resource "aws_lb" "load_balancer" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.sg.id]
-  subnets            = aws_default_subnet.default_subnets[*].id
-  #subnets            = tolist(aws_default_subnet.default_subnets[*].id)  
+  subnets            = aws_default_subnet.default_subnets[*].id  
 
   tags = {
     Environment = "training"
