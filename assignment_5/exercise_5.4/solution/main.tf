@@ -17,10 +17,6 @@ data "aws_ami" "amazon_linux" {
   }
 }
 
-data "template_file" "web_server_template" {
-  template = "${file("${path.module}/web_server.tpl")}"
-}
-
 ## VPC
 
 resource "aws_default_vpc" "default_vpc" {
@@ -71,7 +67,7 @@ resource "aws_instance" "server" {
 
   key_name = aws_key_pair.ec2_key.id
 
-  user_data = data.template_file.web_server_template.rendered
+  user_data = file("web_template.tpl")
 
   tags = {
     Name = "EC2 created by Terraform"
