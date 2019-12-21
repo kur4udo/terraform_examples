@@ -28,7 +28,7 @@ resource "aws_default_vpc" "default_vpc" {
 ## Security group
 
 resource "aws_security_group" "sg" {
-  name        = "SSH access security group"
+  name        = "SSH access and HTTP security group"
   description = "Security group created by Terraform"
   vpc_id      = aws_default_vpc.default_vpc.id
 

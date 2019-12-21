@@ -1,4 +1,5 @@
-
+# Exercise 6.2 - Splitting code - rest of content
+# loadBalancer.tf
 
 ## ELB
 
