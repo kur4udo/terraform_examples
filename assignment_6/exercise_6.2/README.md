@@ -1,6 +1,6 @@
 # Exercise 6.2 - Splitting code - rest of content
 
-In this exercise we will split our code even more creating seperate files for outputs, network, load balancer and EC2.
+In this exercise we will split our code even more creating separate files for outputs, network, load balancer and EC2.
 
 1. Create outputs.tf file and move output load_balancer_dns there,
 2. Create network.tf file and move there resource aws_default_vpc,

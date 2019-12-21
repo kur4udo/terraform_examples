@@ -1,6 +1,6 @@
 # Exercise 6.1 - Splitting code - variables
 
-In this exercise we will create variables.tf file and move there values.
+In this exercise we will create variables.tf file and move values there.
 
 1. Create variables.tf file
 2. Create variables for:
