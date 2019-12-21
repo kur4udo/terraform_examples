@@ -4,7 +4,3 @@
 provider "aws" {
   region = var.region
 }
-
-module "compute" {
-  source = "./compute"
-}

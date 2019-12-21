@@ -1,5 +1,5 @@
 # Exercise 7 - Modules
-# compute/variables.tf
+# variables.tf
 
 # Region
 

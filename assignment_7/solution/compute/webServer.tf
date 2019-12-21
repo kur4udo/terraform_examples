@@ -18,7 +18,7 @@ data "aws_ami" "amazon_linux" {
 resource "aws_security_group" "sg" {
   name        = "SSH access and HTTP security group"
   description = "Security group created by Terraform"
-  vpc_id      = aws_default_vpc.default_vpc.id
+  vpc_id      = var.vpc_id
 
   ingress {
 
@@ -55,7 +55,7 @@ resource "aws_instance" "server" {
 
   key_name = aws_key_pair.ec2_key.id
 
-  user_data = file("web_server.tpl")
+  user_data = file("${path.module}/web_server.tpl")
 
   tags = {
     Name = "EC2 created by Terraform"
