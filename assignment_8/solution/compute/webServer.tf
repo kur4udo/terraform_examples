@@ -1,4 +1,4 @@
-# Exercise 8 - Autoscaling
+# Exercise 8 - Auto scaling
 # compute/webServer.tf
 
 ## Data
@@ -62,7 +62,7 @@ resource "aws_launch_configuration" "lc" {
   key_name = aws_key_pair.ec2_key.id
 }
 
-# Autoscaling group
+# Auto scaling group
 
 resource "aws_autoscaling_group" "asg" {
   name                      = "web_servers_autoscaling_group"

@@ -1,4 +1,4 @@
-# Exercise 8 - Autoscaling
+# Exercise 8 - Auto scaling
 # compute/variables.tf
 
 # AMI

@@ -1,4 +1,4 @@
-# Exercise 8 - Autoscaling
+# Exercise 8 - Auto scaling
 # compute/webServer.tf
 
 ## Data
@@ -77,7 +77,7 @@ resource "aws_key_pair" "ec2_key" {
 # - security_groups
 # - key_name
 
-# Autoscaling group
+# Auto scaling group
 # Create aws_autoscaling_group resource with:
 # - min_size - as a value use var.servers_count
 # - max_size - as a value use var.servers_count

@@ -1,4 +1,4 @@
-# Exercise 8 - Autoscaling
+# Exercise 8 - Auto scaling
 # outputs.tf
 
 output load_balancer_dns {
