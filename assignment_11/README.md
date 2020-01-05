@@ -5,7 +5,8 @@ In this example we will create Route 53 hosted zone and record set which will di
 We will need fixed delegation set. It can be created using:
 aws route53 create-reusable-delegation-set --caller-reference unique_value
 
-We also need a domain name which needs to be updated with name servers (NS) created with delegation set.
+(Optional)
+If you have a domain registered, update it with name servers created above.
 
 Now we can extend our code.
 
