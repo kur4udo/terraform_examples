@@ -1,5 +1,7 @@
 # Terraform examples
 
+All examples are based on AWS resources.
+
 Content description:
 
 Assignment 2:
